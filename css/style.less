@@ -1,0 +1,33 @@
+// compress: true
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+@import "reset";
+@import "vars";
+@import "mixins";
+
+html {
+  box-sizing: border-box;
+}
+body {
+  font-family: Lato, sans-serif;
+
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+img {
+  // данная настройка нужна для того, чтобы изображения никогда не вылезли за размер контейнер по ширине
+  max-width: 100%;
+  // тоже самое, только для высоты
+  height: auto;
+}
+
+
+// Section Hero
+@import "sections/header";
+@import "sections/intro";
+@import "sections/benefits";
+@import "sections/places";
+@import "sections/tours";
+@import "sections/visit";
+@import "sections/videos";
+@import "sections/footer";

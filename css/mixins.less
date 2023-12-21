@@ -1,0 +1,134 @@
+// main: style.less
+
+// ссылки
+.links_nav(@color_one) {
+  text-decoration: none;
+  color: @color_one;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+.links_nav_adaptive(@color_ten) {
+  text-decoration: none;
+  color: @color_ten;
+  font-size: 42px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 48px;
+}
+.links(@color_five) {
+  color: @color_five;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  text-decoration: none;
+}
+.links_hover (@color_eight) {
+  background: url(../img/arrow.svg) no-repeat right center;
+  transition: all 0.5s ease-out;
+  color: @color_eight;
+}
+.links_arrow {
+  padding-right: 59px;
+  display: inline-block;
+  background: url(../img/arrow.svg) no-repeat 95% center;
+}
+
+
+// подзаголовки и параграфы
+.paragraph(@color_two) {
+  color: @color_two;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+.subtitle(@color_three) {
+  color: @color_three;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+}
+.title_h2(@color_four) {
+  color: @color_four;
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.title_h1 (@color_six) {
+  color: @color_six;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.title_h3(@color_seven) {
+  color: @color_seven;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 40px;
+}
+.title_line (@color_nine) {
+  display: block;
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 253px;
+  height: 3px;
+  background-color: @color_nine;
+}
+
+
+// контейнеры
+.wrapper_one {
+  max-width: 1060px;
+  margin: 0 auto;
+  padding: 0 25px;
+}
+.wrapper_two {
+  max-width: 1262px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.videos__wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+
+// изображения
+.card {
+  display: block;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: rgba(21, 24, 36, 0.40);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+.cards_top {
+  grid-column: span 3;
+  position: relative;
+    // данное свойство здесь нужно для того, чтобы при увели чении изображения с помощью свойства scale, оно не наезжало на другое изображение
+  overflow: hidden;
+}
+.cards_bottom {
+  grid-column: span 2;
+  position: relative;
+  overflow: hidden;
+}
+.hover_cards {
+  transform: scale(1.05);
+  transition: .20s all;
+}
+
+
+

@@ -1,0 +1,133 @@
+// main: ../style.less
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: .2s linear;
+  padding-bottom: 20px;
+  z-index: 999;
+  .wrapper__one {
+    .wrapper_one;
+  }
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding-top: 56px;
+  }
+
+  // навигация
+  &__navigation {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__item {
+    margin-right: 82px;
+  }
+  &__item:nth-child(4) {
+    margin-right: 0;
+  }
+  &__link {
+    .links_nav(@color_white);
+  }
+  &__link:hover, &__link:focus, &__link:active {
+    color: red;
+    transition: all 0.5s ease-out;
+    opacity: 0.9;
+  }
+  &__burger {
+    width: 40px;
+    height: 28px;
+    position: relative;
+    display: none;
+  }
+  &__line {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: @color_white;
+    position: absolute;
+    left: 0;
+  }
+  &__line--one {
+    top: 0;
+  }
+  &__line--one {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  &__line--three {
+    bottom: 0;
+  }
+
+  // Адаптив
+  @media screen and (max-width: 767px) {
+    &__burger {
+      display: block;
+    }
+    &__nav {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: @color_dark;
+      z-index: 10;
+      padding: 75px 30px;
+      // данное свойство нам позволяет сдвинуть бургер меню в правую часть экрана
+      transform: translateX(100%);
+      transition: .2s all linear;
+    }
+    .header__nav__active {
+      transform: translateX(0);
+    }
+    &__item {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
+    &__item:nth-child(4) {
+      margin-bottom: 0;
+    }
+    &__link {
+      .links_nav_adaptive(@color_white);
+    }
+    &__nav__close {
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      z-index: 11;
+    }
+    &__line__close {
+      display: block;
+      width: 100%;
+      height: 2px;
+      background-color: @color_white;
+      position: absolute;
+      top: 50%;
+    }
+    &__line__close:first-child {
+      transform: translateY(-50%) rotate(45deg);
+    }
+    &__line__close:last-child {
+      transform: translateY(-50%) rotate(-45deg);
+    }
+  }
+}
+
+// background для скроллинга header
+.header__active {
+  background: #0E1D28;
+  opacity: 0.9;
+}
+
+ 
+ 
+
+
+

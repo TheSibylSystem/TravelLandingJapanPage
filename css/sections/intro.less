@@ -1,0 +1,104 @@
+// main: ../style.less
+
+.intro {
+  // лучше указывать min-height, так как если вдруг высота блока будет превышена, то он адаптируется и ничего не будет ломаться
+  min-height: 100vh;
+  background: url(../img/intro_images/hero.jpg) no-repeat center;
+  background-size: cover;
+  padding-top: 263px;
+  // данный паддинг нужен для того, чтобы при скролле страницы заголовок секции "Benefits" не наехал на данную секцию
+  padding-bottom: 223px;
+  width: 100%;
+  .wrapper__one {
+    .wrapper_one;
+  }
+
+  // h1 и p
+  &__title {
+    .title_h1(@color_white);
+    max-width: 619px;
+    margin-bottom: 22px;
+  }
+  &__subtitle {
+    .paragraph(@color_white);
+    width: 546px;
+    margin-bottom: 59px;
+  }
+
+  // форма
+  &__info {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__field {
+    background-color: rgba(117, 190, 218, 1);
+    background: url(../img/intro_images/circle-ico.png) no-repeat left 6px;
+    background-size: 20px;
+    margin-right: 60px;
+    padding-left: 43px;
+    padding-bottom: 22px;
+    border: 0;
+    border-bottom: 2px solid #BFC0C5;
+    width: 297px;
+    .subtitle(@color_white);
+  }
+  &__field::placeholder {
+    .subtitle(@color_white);
+  }
+  &__field:nth-child(2) { 
+    margin-right: 0;
+  }
+  &__submit {
+    margin: auto;
+    width: 171px;
+    height: 58px;
+    padding: 15px 39px;
+    background: #1B7DFF;
+    color: @color_white;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+  &__submit:hover {
+    transition: all 0.5s ease-out;
+    cursor: pointer;
+    opacity: 0.9;
+  }
+
+  // Адаптив
+  @media screen and (max-width: 914px) {
+    &__field {
+      margin-bottom: 25px;
+    }
+  }
+  @media screen and (max-width: 773px) {
+    & {
+      padding-top: 150px;
+      padding-bottom: 200px;
+    }
+    &__field {
+      width: 100%;
+      margin-right: 0;
+    }
+    &__field:nth-child(2) {
+      margin-bottom: 40px;
+    }
+    &__field::placeholder {
+      font-size: 16px;
+    }
+    &__title {
+      font-size: 30px;
+    }
+    &__subtitle {
+      width: 100%;
+      line-height: 26px;
+    }
+    &__submit {
+      width: 151px;
+      height: 58px;
+      padding: 10px 20px;
+      font-size: 18px;
+    }
+  }
+}

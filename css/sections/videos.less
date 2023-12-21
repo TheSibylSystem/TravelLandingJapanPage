@@ -1,0 +1,30 @@
+// main: ../style.less
+
+.videos {
+  width: 100%;
+  padding-bottom: 100px;
+  &__wrapper {
+    .videos__wrapper;
+    position: relative;
+  }
+
+  // первоначально ширина блока videos равна 100% (1440px), у блока item мы задаём свойство padding top (данный показатель рассчитывается от ширины блока videos) и соответсвенно он будет равен ширине блока videos
+  &__item {
+    padding-top: 56.25%;
+  }
+  &__element {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+
+  // Адаптив
+  @media screen and (max-width: 773px) {
+    & {
+      padding-bottom: 80px;
+    }
+  }
+}
